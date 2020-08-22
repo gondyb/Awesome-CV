@@ -21,7 +21,7 @@
 \documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=.8cm, footskip=0cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -82,22 +82,15 @@
 % Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[C]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Benjamin GONDANGE~~~·~~~Résumé}
-  {\thepage}
-
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{resume/experience.tex}
 \input{resume/education.tex}
-\input{resume/extracurricular.tex}
+\input{resume/experience.tex}
 \input{resume/projects.tex}
+\input{resume/extracurricular.tex}
 \input{resume/skills.tex}
 
 
