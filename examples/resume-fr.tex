@@ -23,7 +23,7 @@
 \usepackage[francais]{babel}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=.8cm, footskip=0cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -47,19 +47,20 @@
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
+\renewcommand{\acvSectionTopSkip}{1.5mm}
+\renewcommand{\acvSectionContentTopSkip}{1mm}
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
+\photo[circle,edge,left]{./profile.jpg}
 \name{Benjamin}{GONDANGE}
 \position{Software Engineer{\enskip\cdotp\enskip}Développeur Backend}
 \address{58 ter rue des Pierres Plates - 37550 Saint-Avertin - France}
 
-\mobile{(+33) 6 81 84 94 21}
+\mobile{06 81 84 94 21}
 \email{benjamin@gondange.com}
 \github{gondyb}
 \linkedin{benjamin-gondange}
@@ -82,24 +83,21 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
+\makecvheader[L]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Benjamin GONDANGE~~~·~~~CV}
-  {\thepage}
 
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{resume-fr/experience.tex}
+
 \input{resume-fr/education.tex}
-\input{resume-fr/extracurricular.tex}
+\input{resume-fr/experience.tex}
 \input{resume-fr/projects.tex}
+\input{resume-fr/extracurricular.tex}
 \input{resume-fr/skills.tex}
 
 
