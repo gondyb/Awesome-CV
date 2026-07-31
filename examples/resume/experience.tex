@@ -14,15 +14,31 @@
     {Senior Software Engineer} % Job title
     {Datadog} % Organization
     {Paris, France} % Location
-    {September 2021 - Present} % Date(s)
+    {2025 - Present} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Tech lead on the Case Management product — a full-stack ticketing platform integrated across the Datadog ecosystem (On-Call, Cloud SIEM, Event Management, Workflow Automation).}
-        \item {Designed and shipped \textbf{AI Agent Assignment for Cases} end-to-end (\textbf{gRPC} API, event handlers, \textbf{MCP} tools, frontend) and drove agentic case management vision to senior leadership.}
-        \item {Architected a reusable \textbf{Case Management Settings} system and delivered \textbf{ServiceNow bi-directional sync}, resolving multiple high-priority customer escalations.}
-        \item {Led infrastructure overhaul: \textbf{PGSM} migration, automated \textbf{Elasticsearch} setup for new DCs, deadlock fixes, and orgstore migration completion.}
-        \item {\textbf{Incident Commander} on a SEV-1 (web-app unreachable on us1+eu1) plus 4 lower-severity incidents. Created the \textbf{Wheel of Misery} chaos-engineering training program.}
-        \item {Built \textbf{distributed systems} in \textbf{Go (Golang)}, \textbf{TypeScript/React}, \textbf{Python} and \textbf{Java}, deployed with \textbf{Kubernetes}, \textbf{Helm}, \textbf{Terraform}; \textbf{Kafka}, \textbf{Postgres}, \textbf{Elasticsearch}.}
+        \item {\textbf{Set the technical direction} for the five-engineer team on Case Management, the ticketing product teams use to track incident, security and alerting work, and the shared layer five other Datadog products build on. Now used weekly by \textbf{15,000 customer organisations} across every production region.}
+        \item {Took AI agents from proposal to production as first-class actors on that platform, including the \textbf{MCP} tools they use to act on a ticket, reaching \textbf{10,000 tickets assigned to agents} within the first months (\href{https://docs.datadoghq.com/incident_response/case_management/ai/custom_agents/}{public documentation}).}
+        \item {Benchmarked coding agents against real customer support tickets \textbf{before} committing to the product, and scoped the first version around what the results actually showed rather than the demo.}
+        \item {Designed how autonomous agents get identity and permissions in a multi-tenant system: who the agent acts as, who delegated it, and whether its access can exceed theirs. Adopted by \textbf{three platform teams}.}
+        \item {Led the platform's \textbf{reliability work}, including the finding that an agent action which starts an LLM cannot be undone if its trigger arrives twice. Used it to hold an upstream team to ordering guarantees before adopting their service.}
+        \item {Shipped features whose code had to land inside \textbf{six other teams' services}, writing it myself rather than filing requests, and built the per-tenant settings service every feature now configures through.}
+        \item {\textbf{Core Incident Commander} in Datadog's company-wide rotation, including a SEV-1 that took the web application down across a region; gave an org-wide talk on agentic engineering practice.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer} % Job title
+    {Datadog} % Organization
+    {Paris, France} % Location
+    {September 2021 - 2025} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {\textbf{One of three engineers who built Case Management from scratch}, joining as a new graduate: guided the architecture decisions and wrote most of the initial Go backend and TypeScript/React frontend, growing it from nothing into a layer five other products depend on.}
+        \item {Automated Elasticsearch provisioning for new datacenters and completed a multi-tenant organisation data-store migration, so that standing up a new region no longer needs manual work.}
+        \item {Led a Postgres migration and fixed the deadlocks and event-relay failures behind the platform's recurring reliability incidents.}
+        \item {Built two-way synchronisation with third-party ITSM tools and the on-call paging path, the integrations enterprise customers most often required.}
       \end{cvitems}
     }
 
@@ -34,12 +50,8 @@
     {February 2021 - August 2021} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Worked on the backend of the event product.}
-        \item {Migrated events to a new in-house storage solution.}
-        \item {Built high-throughput realtime \textbf{distributed systems} in \textbf{Go (Golang)}, \textbf{Python} and \textbf{Java}.}
-        \item {Integrated open-source monitoring softwares with Datadog's event product.}
-        \item {Deployed scalable services with \textbf{Kubernetes} and \textbf{Helm}.}
-        \item {Developed a distributed rules-based aggregation engine using \textbf{Apache Kafka}.}
+        \item {Migrated the event product's backend to a new in-house storage solution, and built a distributed rules-based aggregation engine on Apache Kafka.}
+        \item {Built high-throughput realtime distributed systems in Go, Python and Java, deployed with Kubernetes and Helm.}
       \end{cvitems}
     }
 
@@ -53,14 +65,7 @@
     {July 2019 - November 2019} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Designed a service architecture for a growth opportunity.}
-        \item {Implemented a \textbf{GraphQL API} in Symfony (PHP).}
-        \item {Wrote \textbf{automated tests} to maintain a good code quality.}
-        \item {Built automated \textbf{CI/CD pipelines} on CircleCI, interacting with \textbf{Docker containers}.}
-        \item {Designed a data pipeline for Machine-Learning ticket recognition model using \textbf{Apache Kafka}.}
-        \item {Developed a ticket-buying module which interfaces with Dutch and international ticket providers \textbf{third-party APIs}.}
-        \item {Imagined and implemented browser notifications for fun and personal knowledge.}
-        \item {Sold \textbf{1200 tickets} using the feature during the internship.}
+        \item {Built a GraphQL API and a ticket-buying module integrating Dutch and international ticket providers, which sold 1200 tickets during the internship.}
       \end{cvitems}
     }
 

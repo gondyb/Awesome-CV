@@ -26,6 +26,16 @@
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
+% Small caps, done so the PDF text layer still extracts as real capitals.
+% Plain \scshape on lowercase input renders "SENiOR ENGiNEER" and, worse, extracts
+% that way too, so ATS keyword search misses "Senior Software Engineer". Feeding
+% uppercase input through the c2sc (capitals-to-small-caps) feature keeps the
+% typographic look while leaving the underlying characters as capitals.
+\renewcommand*{\bodyfont}{\sourcesanspro}
+\renewcommand*{\footerfont}{\sourcesanspro}
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\color{graytext}\MakeUppercase{#1}}}
+\renewcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\color{awesome}\MakeUppercase{#1}}}
+
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
@@ -41,7 +51,7 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+\setbool{acvSectionColorHighlight}{false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -56,10 +66,10 @@
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Benjamin}{GONDANGE}
 \position{Senior Software Engineer}
-\address{265 boulevard Voltaire - 75011 Paris - France}
+\address{Paris, France}
 
 \mobile{+33 6 81 84 94 21}
-\email{benjamin@gondange.com}
+\email{benjamin.gondange@gmail.com}
 \github{gondyb}
 \linkedin{benjamin-gondange}
 % \gitlab{gitlab-id}
@@ -88,8 +98,8 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+\input{resume/summary.tex}
 \input{resume/experience.tex}
-\input{resume/projects.tex}
 \input{resume/education.tex}
 \input{resume/skills.tex}
 
